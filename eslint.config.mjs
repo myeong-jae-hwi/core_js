@@ -1,11 +1,11 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+import tseslint from 'typescript-eslint';
 
 export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
-  { files: ["**/*.{js,mjs,cjs,ts}"] },
+  { files: ['**/*.{js,mjs,cjs,ts}'] },
   {
     languageOptions: {
       globals: {
@@ -14,7 +14,8 @@ export default [
       },
     },
     rules: {
-      "no-unused-vars": "warn",
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
     },
   },
 ];

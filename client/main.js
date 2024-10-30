@@ -1,3 +1,5 @@
-const a = "hello";
+// alert('hi'); // 알림창
 
-// console.log(a);
+// confirm('gd'); // Y/N 있는 알림창
+
+// prompt('hi');  // 입력창
