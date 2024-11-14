@@ -30,7 +30,6 @@ for (let i in messenger) {
 
 // 2. Object.assign()을 사용한 복사
 
-const copyObject = Object.assign({}, messenger);
 
 // 3. 전개 연산자(...)를 사용한 복사
 
