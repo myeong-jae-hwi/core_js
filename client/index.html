@@ -6,26 +6,47 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./asset/favicon.svg" type="image/x-icon" />
-    <script src="./utils/type.js" defer></script>
-    <script src="./chapter/core/test.js" defer></script>
+    <script src="./lib/dom/getNode.js" defer></script>
+    <script src="./lib/utils/type.js" defer></script>
+    <script src="./lib/error/typeError.js"></script>
+    <script src="./lib/error/syntaxError.js"></script>
+    <script src="./lib/error/refError.js"></script>
+
+    <script src="./lib/dom/css.js"></script>
+
+    <script src="./lib/dom/getAttr.js"></script>
+    <script src="./lib/dom/insert.js"></script>
+
+    <script src="./chapter/dom/07.event.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   </head>
   <body>
-    <h1><span class="first">Core</span> <span class="second">JS</span></h1>
+    <!-- <h1><span class="first">Core</span> <span class="second">JS</span></h1> -->
 
-    <!-- <button class="btn">CTA</button> -->
-    <div>
-      <input type="text" class="todo" />
-      <button type="button" class="btn">등록</button>
+    <!-- <video src="" autoplay id="vidioElement"></video> -->
+    <nav>
+      <ul>
+        <li class="about" data-name="about">
+          <span>ABOUT</span>
+        </li>
+        <li class="home" data-name="home">
+          🏠
+          <span>HOME</span>
+        </li>
+        <li class="contact" data-name="contact">
+          📞
+          <span>CONTACT</span>
+        </li>
+      </ul>
+    </nav>
 
-      <!-- <ul class="todoList"></ul> -->
+    <div class="ground">
+      <div class="ball">
+        <img src="https://en.js.cx/clipart/ball.svg" alt="축구공" />
+      </div>
     </div>
 
-    <ul></ul>
-
-    <!-- <div class="space">
-      <div class="dot"></div>
-
-      <div class="circle"></div>
-    </div> -->
+    <input type="text" />
   </body>
 </html>
