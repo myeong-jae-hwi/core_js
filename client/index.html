@@ -6,47 +6,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./asset/favicon.svg" type="image/x-icon" />
-    <script src="./lib/dom/getNode.js" defer></script>
-    <script src="./lib/utils/type.js" defer></script>
-    <script src="./lib/error/typeError.js"></script>
-    <script src="./lib/error/syntaxError.js"></script>
-    <script src="./lib/error/refError.js"></script>
 
-    <script src="./lib/dom/css.js"></script>
-
-    <script src="./lib/dom/getAttr.js"></script>
-    <script src="./lib/dom/insert.js"></script>
-
-    <script src="./chapter/dom/07.event.js" defer></script>
+    <script src="./main.js" type="'module"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   </head>
   <body>
-    <!-- <h1><span class="first">Core</span> <span class="second">JS</span></h1> -->
-
-    <!-- <video src="" autoplay id="vidioElement"></video> -->
-    <nav>
-      <ul>
-        <li class="about" data-name="about">
-          <span>ABOUT</span>
-        </li>
-        <li class="home" data-name="home">
-          🏠
-          <span>HOME</span>
-        </li>
-        <li class="contact" data-name="contact">
-          📞
-          <span>CONTACT</span>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="ground">
-      <div class="ball">
-        <img src="https://en.js.cx/clipart/ball.svg" alt="축구공" />
+    <form class="calculator">
+      <div class="first">
+        <label for="firstNumber">First Value</label>
+        <input type="number" name="first" id="firstNumber" required />
       </div>
-    </div>
 
-    <input type="text" />
+      <div class="operator">+</div>
+
+      <div class="second">
+        <label for="secondNumber">Second Value</label>
+        <input type="number" name="second" id="secondNumber" required />
+      </div>
+
+      <input id="clear" type="submit" value="clear" />
+
+      <div class="result">-</div>
+    </form>
   </body>
 </html>

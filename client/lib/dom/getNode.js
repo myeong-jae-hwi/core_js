@@ -1,11 +1,17 @@
-function getNode(tag, con = document) {
-  if (con.nodeType !== 9) con.getNode(con);
 
-  return con.querySelector(tag);
+
+export function getNode(node,context = document){
+  
+  if(context.nodeType !== 9) context = document.querySelector(context);
+  return context.querySelector(node)
+
 }
 
-function getNodes(tag, con = document) {
-  if (con.nodeType !== 9) con.getNode(con);
 
-  return con.querySelectorAll(tag);
+
+export function getNodes(node,context = document){
+  
+  if(context.nodeType !== 9) context = getNode(context);
+  return context.querySelectorAll(node)
 }
+
