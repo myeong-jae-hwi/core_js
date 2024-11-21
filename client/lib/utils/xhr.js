@@ -52,7 +52,7 @@ xhr({
   method: 'DELETE',
   url: END_POINT,
   success: (data) => {
-    console.log(data);
+    // console.log(data);
   },
   fail: () => {},
 });
@@ -79,3 +79,34 @@ xhr.delete = (url, success, fail) => {
     fail,
   });
 };
+
+function xhrPromise(options) {
+  const { method, url } = options;
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.open(method, url);
+  xhr.send();
+
+  return new Promise((resolve, reject) => {
+    xhr.addEventListener('readystatechange', () => {
+      if (xhr.readyState === 4) {
+        // complete
+        if (xhr.status >= 200 && xhr.status < 400) {
+          //
+          resolve(JSON.parse(xhr.response));
+        } else {
+          //
+          reject();
+        }
+      }
+    });
+  });
+}
+
+xhrPromise({
+  method: 'GET',
+  url: END_POINT,
+}).then((res) => {
+  console.log(res);
+});
