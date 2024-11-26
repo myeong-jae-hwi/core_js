@@ -62,3 +62,12 @@ jaehwi.delete = (url, options) => {
     ...options,
   });
 };
+
+jaehwi.post = (url, body, options) => {
+  return jaehwi({
+    method: 'POST',
+    url,
+    body: JSON.stringify(body),
+    ...options,
+  });
+};

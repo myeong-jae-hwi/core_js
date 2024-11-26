@@ -192,4 +192,5 @@ xhrPromise.delete = (url) => xhrPromise({ url, method: 'DELETE' });
 //   .catch(() => {});
 
 // xhrPromise.put()
+
 // xhrPromise.delete()

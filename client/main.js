@@ -1,58 +1,22 @@
-import {
-  attr,
-  jaehwi,
-  delayP,
-  getNode,
-  changeColor,
-  renderLoading,
-  renderUserCard,
-  renderEmptyCard,
-} from './lib/index.js';
+import { setStorage, getStorage, getNode, deleteStorage } from './lib/index.js';
 
-const END_POINT = 'https://jsonplaceholder.typicode.com/users';
+const input = getNode('#textField');
+const clear = getNode('button[data-name="clear"]');
 
-const userCardInner = getNode('.user-card-inner');
+input.addEventListener('input', (e) => {
+  console.log(input.value);
+  setStorage('content', input.value);
+});
 
-async function renderUserList() {
-  try {
-    const response = await jaehwi.get(END_POINT);
-    // getNode('.loadingSpinner').remove();
+clear.addEventListener('click', () => {
+  input.value = '';
+  deleteStorage();
+});
 
-    gsap.to('.loadingSpinner', {
-      opacity: 0,
-      onComplete() {
-        this._targets[0].remove();
-      },
-    });
-
-    const data = response.data;
-
-    await delayP(300);
-
-    data.forEach((user) => renderUserCard(userCardInner, user));
-    changeColor('.user-card');
-
-    gsap.from('.user-card', {
-      x: -100,
-      opacity: 0,
-      stagger: 0.1,
-    });
-  } catch {
-    renderEmptyCard(userCardInner);
-    console.error('!!!!!!!!!!!!!!!!!!!!');
-  }
-}
-renderLoading(userCardInner);
-renderUserList();
-
-function handleDeleteCard(e) {
-  const btn = e.target.closest('button');
-  if (!btn) return;
-
-  const idx = attr(btn.parentElement, 'data-index');
-  console.log(idx);
-
-  jaehwi.delete(`${END_POINT}/${idx}`);
+async function init() {
+  const data = await getStorage('content');
+  console.log(data);
+  input.value = data;
 }
 
-userCardInner.addEventListener('click', handleDeleteCard);
+init();

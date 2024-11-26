@@ -4,3 +4,4 @@ export * from './memo.js';
 export * from './xhr.js';
 export * from './jaehwi.js';
 export * from './delay.js';
+export * from './storage.js';
