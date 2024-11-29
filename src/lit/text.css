@@ -1,0 +1,18 @@
+.card {
+  display: flex;
+  border: 1px solid black;
+  width: 500px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+img {
+  width: 150px;
+}
+
+.innner {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
