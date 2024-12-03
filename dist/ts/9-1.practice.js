@@ -4,7 +4,7 @@ function processInput(input) {
         console.log(input.toUpperCase());
     }
     if (typeof input === "number") {
-        console.log(Math.pow(input, 2));
+        console.log(input ** 2);
     }
     if (typeof input === "string") {
         console.log(input.length);

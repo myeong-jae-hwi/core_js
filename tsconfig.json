@@ -2,7 +2,7 @@
   "include": ["src"],
   "compilerOptions": {
     "outDir": "dist",
-    "target": "ES2015",
+    "target": "ESNext",
     "moduleResolution": "node",
     "skipLibCheck": true,
     "module": "ESNext",
