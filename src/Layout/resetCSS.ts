@@ -1,9 +1,6 @@
 import { css } from "lit";
 
 export default css`
-  /*
-*  html5resetcss
-*/
   html,
   body,
   div,
@@ -84,10 +81,6 @@ export default css`
   body {
     line-height: 1;
   }
-
-  img {
-    width: 100%;
-  }
   article,
   aside,
   details,
@@ -106,6 +99,9 @@ export default css`
   }
   ul {
     list-style: none;
+  }
+  img {
+    width: 100%;
   }
   blockquote,
   q {
